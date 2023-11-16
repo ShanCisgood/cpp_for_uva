@@ -1,25 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-int GCD(int a, int b) {
-    while (b) {
-        int r = a % b;  // a = b*q + r
-        a = b;
-        b = r;
+int func(int n) {
+    int cnt = 1;
+    while (n - 1) {
+        n = (n & 1 ? 3 * n + 1 : n >> 2);
+        cnt++;
     }
-    return a;
+    return cnt;
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 
-    int n;
-    while (cin >> n && n) {
-        int ans = 0;
-        for (int i = 1; i < n; i++) {
-            for (int j = i + 1; j <= n; j++)
-                ans += GCD(i, j);
-        }
-        cout << ans << '\n';
+    int a, b;
+    while (cin >> a >> b) {
+        int mx = 0;
+        cout << a << ' ' << b << ' ';
+        if (a > b)
+            swap(a, b);
+        for (int i = a; i <= b; i++)
+            mx = max(mx, func(i));
+        cout << mx << '\n';
     }
 
     return 0;
