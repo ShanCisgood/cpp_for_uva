@@ -7,7 +7,7 @@ int main() {
     while (cin >> str && str != "0") {
         int cnt = 0;
         for (int i = 0; i < str.length(); i++)
-            cnt += ((i & 1) * 2 - 1) * (str[i] - '0');
+            cnt += (((i & 1) << 1) - 1) * (str[i] - '0');
         cout << str << " is" << notout[!(abs(cnt) % 11)] << "a multiple of 11.\n";
     }
     return 0;
