@@ -15,7 +15,7 @@ int main() {
             ans += arr[i] * exp * (n - i);
             exp *= x;
         }
-        printf("%d\n", ans);
+        printf("%d\n", ans);  // 用 cout 會錯，不知道為什麼
     }
     return 0;
 }
