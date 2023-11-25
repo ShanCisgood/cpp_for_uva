@@ -22,6 +22,5 @@ int main() {
         int d = gcd(num1, num2) - 1;
         cout << "Pair #" << i << ": " << (!d ? "Love is not all you need!\n" : "All you need is love!\n");
     }
-
     return 0;
 }
