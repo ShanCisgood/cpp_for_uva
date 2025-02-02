@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "ratio": "cpp",
-        "iosfwd": "cpp",
-        "random": "cpp"
-    }
-}
